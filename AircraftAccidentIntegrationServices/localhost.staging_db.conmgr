@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.staging_db"
+  DTS:DTSID="{DE649012-6348-411E-8545-9310DF174577}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=staging_db;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-AircraftAccidentIntegrationServices-{DE649012-6348-411E-8545-9310DF174577}localhost.staging_db;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

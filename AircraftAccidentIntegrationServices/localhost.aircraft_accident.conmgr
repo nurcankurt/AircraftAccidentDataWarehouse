@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.aircraft_accident"
+  DTS:DTSID="{A34F10E4-8202-4024-96B4-FD88AD7369AB}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=aircraft_accident;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-AircraftAccidentIntegrationServices-{A34F10E4-8202-4024-96B4-FD88AD7369AB}localhost.aircraft_accident;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

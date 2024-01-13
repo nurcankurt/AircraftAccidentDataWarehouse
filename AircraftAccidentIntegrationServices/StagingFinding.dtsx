@@ -1,0 +1,723 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/11/2024 1:35:19 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-UMSAHSD"
+  DTS:CreatorName="DESKTOP-UMSAHSD\Nurcan"
+  DTS:DTSID="{4C60F781-4E8C-4EA4-91EA-6483CF66E0E7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{E24BCE6C-F683-499C-B19F-AB18C22D7591}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C8459642-B5FC-475B-B78C-D38FD74307D9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\OLTP Findings Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLTP Findings Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [ev_id]
+      ,[Aircraft_Key]
+      ,[finding_no]
+      ,[finding_description]
+      ,[category_no]
+      ,[subcategory_no]
+      ,[section_no]
+      ,[subsection_no]
+      ,[modifier_no]
+      ,[Cause_Factor]
+  FROM [dbo].[Findings]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLTP Findings Source.Connections[OleDbConnection]"
+                  connectionManagerID="{A34F10E4-8202-4024-96B4-FD88AD7369AB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.aircraft_accident]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[ev_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[ev_id]"
+                      length="14"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[ev_id]"
+                      name="ev_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[Aircraft_Key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[Aircraft_Key]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[Aircraft_Key]"
+                      name="Aircraft_Key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[finding_no]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[finding_no]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[finding_no]"
+                      name="finding_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[finding_description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[finding_description]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[finding_description]"
+                      name="finding_description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[category_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[category_no]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[category_no]"
+                      name="category_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[subcategory_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[subcategory_no]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[subcategory_no]"
+                      name="subcategory_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[section_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[section_no]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[section_no]"
+                      name="section_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[subsection_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[subsection_no]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[subsection_no]"
+                      name="subsection_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[modifier_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[modifier_no]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[modifier_no]"
+                      name="modifier_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[Cause_Factor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[Cause_Factor]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[Cause_Factor]"
+                      name="Cause_Factor"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[ev_id]"
+                      dataType="wstr"
+                      length="14"
+                      name="ev_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[Aircraft_Key]"
+                      dataType="i4"
+                      name="Aircraft_Key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[finding_no]"
+                      dataType="i4"
+                      name="finding_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[finding_description]"
+                      dataType="wstr"
+                      length="255"
+                      name="finding_description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[category_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="category_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[subcategory_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="subcategory_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[section_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="section_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[subsection_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="subsection_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[modifier_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="modifier_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].ExternalColumns[Cause_Factor]"
+                      dataType="wstr"
+                      length="1"
+                      name="Cause_Factor" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[ev_id]"
+                      dataType="wstr"
+                      length="14"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[ev_id]"
+                      name="ev_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[Aircraft_Key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[Aircraft_Key]"
+                      name="Aircraft_Key" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[finding_no]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[finding_no]"
+                      name="finding_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[finding_description]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[finding_description]"
+                      name="finding_description" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[category_no]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[category_no]"
+                      name="category_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[subcategory_no]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[subcategory_no]"
+                      name="subcategory_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[section_no]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[section_no]"
+                      name="section_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[subsection_no]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[subsection_no]"
+                      name="subsection_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[modifier_no]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[modifier_no]"
+                      name="modifier_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[Cause_Factor]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[Cause_Factor]"
+                      name="Cause_Factor" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Staging Finding Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Staging Finding Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Finding]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Staging Finding Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{DE649012-6348-411E-8545-9310DF174577}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.staging_db]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].Columns[ev_id]"
+                      cachedDataType="wstr"
+                      cachedLength="14"
+                      cachedName="ev_id"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[ev_id]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[ev_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].Columns[Aircraft_Key]"
+                      cachedDataType="i4"
+                      cachedName="Aircraft_Key"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[Aircraft_Key]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[Aircraft_Key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].Columns[finding_no]"
+                      cachedDataType="i4"
+                      cachedName="finding_no"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[finding_no]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[finding_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].Columns[finding_description]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="finding_description"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[finding_description]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[finding_description]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].Columns[category_no]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="category_no"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[category_no]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[category_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].Columns[subcategory_no]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="subcategory_no"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[subcategory_no]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[subcategory_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].Columns[section_no]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="section_no"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[section_no]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[section_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].Columns[subsection_no]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="subsection_no"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[subsection_no]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[subsection_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].Columns[modifier_no]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="modifier_no"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[modifier_no]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[modifier_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].Columns[Cause_Factor]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Cause_Factor"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cause_Factor]"
+                      lineageId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output].Columns[Cause_Factor]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[ev_id]"
+                      dataType="wstr"
+                      length="14"
+                      name="ev_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[Aircraft_Key]"
+                      dataType="i4"
+                      name="Aircraft_Key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[finding_no]"
+                      dataType="i4"
+                      name="finding_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[finding_description]"
+                      dataType="wstr"
+                      length="255"
+                      name="finding_description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[category_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="category_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[subcategory_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="subcategory_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[section_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="section_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[subsection_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="subsection_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[modifier_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="modifier_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cause_Factor]"
+                      dataType="wstr"
+                      length="1"
+                      name="Cause_Factor" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Staging Finding Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Staging Finding Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Staging Finding Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Staging Finding Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\OLTP Findings Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE Finding"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B637D5A2-57D3-4576-BC36-A1A22B199ED7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE Finding"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DE649012-6348-411E-8545-9310DF174577}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Finding" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{2A6B6841-B68D-4998-824E-AE129585D586}"
+      DTS:From="Package\TRUNCATE Finding"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="263,238" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\TRUNCATE Finding"
+          TopLeft="290,119" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="379,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-38.5,77"
+              Start="0,0"
+              End="-38.5,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5"
+                    Point2="0,38.5"
+                    Point3="-4,38.5" />
+                  <mssgle:LineSegment
+                    End="-34.5,38.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.5,38.5"
+                    Point2="-38.5,38.5"
+                    Point3="-38.5,42.5" />
+                  <mssgle:LineSegment
+                    End="-38.5,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Data Flow Task\Staging Finding Destination"
+          TopLeft="272.5,279.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Data Flow Task\OLTP Findings Source"
+          TopLeft="294,123" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="389,165">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.5,114.5"
+              Start="0,0"
+              End="-9.5,107">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.25"
+                    Point2="0,57.25"
+                    Point3="-4,57.25" />
+                  <mssgle:LineSegment
+                    End="-5.5,57.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.5,57.25"
+                    Point2="-9.5,57.25"
+                    Point3="-9.5,61.25" />
+                  <mssgle:LineSegment
+                    End="-9.5,107" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLTP Findings Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Staging Finding Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

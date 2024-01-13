@@ -1,0 +1,1201 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/11/2024 2:04:26 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-UMSAHSD"
+  DTS:CreatorName="DESKTOP-UMSAHSD\Nurcan"
+  DTS:DTSID="{6FA2A484-33F5-4659-84A9-AC63E60195EE}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="45"
+  DTS:VersionGUID="{DEFB81E7-C3EF-4426-8F2A-8F657BB6F23E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{97DB974B-C438-4484-A6FE-BA905B076B10}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Nurcan\OneDrive - student.cankaya.edu.tr\Desktop\New folder (2)\New Text Document.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ev_id"
+              DTS:DTSID="{B80DCF34-CD78-4EA0-926C-5DB336D43C49}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Aircraft_Key"
+              DTS:DTSID="{6EC721EB-A184-4CBF-BD1B-D79D2DD76370}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="finding_no"
+              DTS:DTSID="{BA329B07-D58E-4A15-ABCD-E1777075063C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="finding_description"
+              DTS:DTSID="{38C0AA0B-C826-489D-836C-94D21544E1E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="category_no"
+              DTS:DTSID="{793D1C13-BDFD-4B2D-8C83-326B49A4996A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="subcategory_no"
+              DTS:DTSID="{3C78FE81-68AB-44AC-95B3-B91AAA1CCC55}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="section_no"
+              DTS:DTSID="{61E93FE0-7796-4821-A8EA-FF3D88B5BB5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="subsection_no"
+              DTS:DTSID="{D445E058-9DEE-4CB4-94F0-3FBB55DADC4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="modifier_no"
+              DTS:DTSID="{62DEC397-FD2E-4DE8-ADB0-267B89128A56}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cause_Factor"
+              DTS:DTSID="{691E9E85-EE2E-4B53-A384-2E90E1E5C824}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.staging_db 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{781423C5-DA21-47DC-806A-2A879562B2BF}"
+      DTS:ObjectName="localhost.staging_db 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=staging_db;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{781423C5-DA21-47DC-806A-2A879562B2BF}localhost.staging_db 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8FDCB6D1-E925-494D-920A-009ED1AB248B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Clean finding_description"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Clean finding_description"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Clean finding_description.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Clean finding_description.Inputs[Derived Column Input].Columns[finding_description]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="finding_description"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_description]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE]([REPLACE](#{Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_description]},"- C",""),"- F","")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(REPLACE(finding_description,"- C",""),"- F","")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Clean finding_description.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Clean finding_description.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Clean finding_description.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Clean finding_description.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Clean finding_description.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Clean finding_description.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Clean finding_description.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Clean finding_description.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Create aircraft_id"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Create aircraft_id"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Create aircraft_id.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Create aircraft_id.Inputs[Derived Column Input].Columns[ev_id]"
+                      cachedDataType="wstr"
+                      cachedLength="14"
+                      cachedName="ev_id"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[ev_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Create aircraft_id.Inputs[Derived Column Input].Columns[Aircraft_Key]"
+                      cachedDataType="i4"
+                      cachedName="Aircraft_Key"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[Aircraft_Key]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Create aircraft_id.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Output].Columns[aircraft_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="265"
+                      lineageId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Output].Columns[aircraft_id]"
+                      name="aircraft_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,255)#{Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[ev_id]} + (DT_WSTR,10)#{Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[Aircraft_Key]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)ev_id + (DT_WSTR,10)Aircraft_Key</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Create aircraft_id.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Create category_name column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Create category_name column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Create category_name column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Create category_name column.Inputs[Derived Column Input].Columns[finding_description]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="finding_description"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_description]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Create category_name column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Create category_name column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create category_name column.Outputs[Derived Column Output].Columns[category_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Create category_name column.Outputs[Derived Column Output].Columns[category_name]"
+                      name="category_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_description]},1,[FINDSTRING](#{Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_description]},"-",1) - 1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(finding_description,1,FINDSTRING(finding_description,"-",1) - 1)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Create category_name column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Create category_name column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create category_name column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create category_name column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create category_name column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create category_name column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Create finding_id"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Create finding_id"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Create finding_id.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Create finding_id.Inputs[Derived Column Input].Columns[finding_no]"
+                      cachedDataType="i4"
+                      cachedName="finding_no"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_no]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Create finding_id.Inputs[Derived Column Input].Columns[aircraft_id]"
+                      cachedDataType="wstr"
+                      cachedLength="265"
+                      cachedName="aircraft_id"
+                      lineageId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Output].Columns[aircraft_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Create finding_id.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Create finding_id.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create finding_id.Outputs[Derived Column Output].Columns[finding_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="275"
+                      lineageId="Package\Data Flow Task\Create finding_id.Outputs[Derived Column Output].Columns[finding_id]"
+                      name="finding_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Output].Columns[aircraft_id]} + (DT_WSTR,10)#{Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_no]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">aircraft_id + (DT_WSTR,10)finding_no</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Create finding_id.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Create finding_id.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create finding_id.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create finding_id.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create finding_id.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create finding_id.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Data Warehouse Finding Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Data Warehouse Finding Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Finding]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Data Warehouse Finding Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{CD337B76-553B-4B0B-96D7-7C79F86B3F84}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.data_warehouse]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input].Columns[category_name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="category_name"
+                      externalMetadataColumnId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[category_name]"
+                      lineageId="Package\Data Flow Task\Create category_name column.Outputs[Derived Column Output].Columns[category_name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input].Columns[aircraft_id]"
+                      cachedDataType="wstr"
+                      cachedLength="265"
+                      cachedName="aircraft_id"
+                      externalMetadataColumnId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[aircraft_id]"
+                      lineageId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Output].Columns[aircraft_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input].Columns[finding_id]"
+                      cachedDataType="wstr"
+                      cachedLength="275"
+                      cachedName="finding_id"
+                      externalMetadataColumnId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[finding_id]"
+                      lineageId="Package\Data Flow Task\Create finding_id.Outputs[Derived Column Output].Columns[finding_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[finding_id]"
+                      dataType="wstr"
+                      length="275"
+                      name="finding_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[aircraft_id]"
+                      dataType="wstr"
+                      length="265"
+                      name="aircraft_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input].ExternalColumns[category_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="category_name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Warehouse Finding Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Warehouse Finding Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Warehouse Finding Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Warehouse Finding Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Warehouse Finding Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Staging Finding Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Staging Finding Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Finding]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Staging Finding Source.Connections[OleDbConnection]"
+                  connectionManagerID="{DE649012-6348-411E-8545-9310DF174577}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.staging_db]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[ev_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[ev_id]"
+                      length="14"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[ev_id]"
+                      name="ev_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[Aircraft_Key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[Aircraft_Key]"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[Aircraft_Key]"
+                      name="Aircraft_Key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_no]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[finding_no]"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_no]"
+                      name="finding_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[finding_description]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[finding_description]"
+                      name="finding_description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[category_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[category_no]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[category_no]"
+                      name="category_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[subcategory_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[subcategory_no]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[subcategory_no]"
+                      name="subcategory_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[section_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[section_no]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[section_no]"
+                      name="section_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[subsection_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[subsection_no]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[subsection_no]"
+                      name="subsection_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[modifier_no]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[modifier_no]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[modifier_no]"
+                      name="modifier_no"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[Cause_Factor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[Cause_Factor]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].Columns[Cause_Factor]"
+                      name="Cause_Factor"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[ev_id]"
+                      dataType="wstr"
+                      length="14"
+                      name="ev_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[Aircraft_Key]"
+                      dataType="i4"
+                      name="Aircraft_Key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[finding_no]"
+                      dataType="i4"
+                      name="finding_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[finding_description]"
+                      dataType="wstr"
+                      length="255"
+                      name="finding_description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[category_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="category_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[subcategory_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="subcategory_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[section_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="section_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[subsection_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="subsection_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[modifier_no]"
+                      dataType="wstr"
+                      length="2"
+                      name="modifier_no" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output].ExternalColumns[Cause_Factor]"
+                      dataType="wstr"
+                      length="1"
+                      name="Cause_Factor" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[ev_id]"
+                      dataType="wstr"
+                      length="14"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[ev_id]"
+                      name="ev_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[Aircraft_Key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[Aircraft_Key]"
+                      name="Aircraft_Key" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[finding_no]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[finding_no]"
+                      name="finding_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[finding_description]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[finding_description]"
+                      name="finding_description" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[category_no]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[category_no]"
+                      name="category_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[subcategory_no]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[subcategory_no]"
+                      name="subcategory_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[section_no]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[section_no]"
+                      name="section_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[subsection_no]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[subsection_no]"
+                      name="subsection_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[modifier_no]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[modifier_no]"
+                      name="modifier_no" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[Cause_Factor]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[Cause_Factor]"
+                      name="Cause_Factor" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Create category_name column.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Clean finding_description.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task\Create aircraft_id.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Create category_name column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output2]"
+              endId="Package\Data Flow Task\Create finding_id.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Create aircraft_id.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output3]"
+              endId="Package\Data Flow Task\Data Warehouse Finding Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Create finding_id.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Clean finding_description.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Staging Finding Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{07EFCC2B-F03C-4B0E-863E-A7C5A5AA9887}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DE649012-6348-411E-8545-9310DF174577}"
+          SQLTask:SqlStatementSource="WITH SplitValues AS (&#xA;    SELECT &#xA;        finding_description,&#xA;        CHARINDEX('-', finding_description) AS firstDash,&#xA;        CHARINDEX('-', finding_description, CHARINDEX('-', finding_description) + 1) AS secondDash,&#xA;        CHARINDEX('-', finding_description, CHARINDEX('-', finding_description, CHARINDEX('-', finding_description) + 1) + 1) AS thirdDash,&#xA;        CHARINDEX('-', finding_description, CHARINDEX('-', finding_description, CHARINDEX('-', finding_description, CHARINDEX('-', finding_description) + 1) + 1) + 1) AS fourthDash&#xA;    FROM [dbo].[Finding]&#xA;)&#xA;SELECT &#xA;    finding_description,&#xA;    CASE WHEN LEN(finding_description) - LEN(REPLACE(finding_description, '-', '')) &gt;= 1 THEN SUBSTRING(finding_description, 1, firstDash - 1) ELSE NULL END AS category,&#xA;    CASE WHEN LEN(finding_description) - LEN(REPLACE(finding_description, '-', '')) &gt;= 2 THEN SUBSTRING(finding_description, firstDash + 1, secondDash - firstDash - 1) ELSE NULL END AS subcategory,&#xA;    CASE WHEN LEN(finding_description) - LEN(REPLACE(finding_description, '-', '')) &gt;= 3 THEN SUBSTRING(finding_description, secondDash + 1, thirdDash - secondDash - 1) ELSE NULL END AS section,&#xA;    CASE WHEN LEN(finding_description) - LEN(REPLACE(finding_description, '-', '')) &gt;= 4 THEN SUBSTRING(finding_description, thirdDash + 1, fourthDash - thirdDash - 1) ELSE NULL END AS subsection,&#xA;    CASE WHEN LEN(finding_description) - LEN(REPLACE(finding_description, '-', '')) &gt;= 5 THEN SUBSTRING(finding_description, fourthDash + 1, LEN(finding_description)) ELSE NULL END AS modifier&#xA;FROM&#xA;    SplitValues;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{88C89E7A-6496-4B0D-8A1D-A58B6A538B2B}"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Execute SQL Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="98,149" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="83,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="100,101.5"
+              Start="0,0"
+              End="100,94">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.75"
+                    Point2="0,50.75"
+                    Point3="4,50.75" />
+                  <mssgle:LineSegment
+                    End="96,50.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="96,50.75"
+                    Point2="100,50.75"
+                    Point3="100,54.75" />
+                  <mssgle:LineSegment
+                    End="100,94" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Data Flow Task\Clean finding_description"
+          TopLeft="307,236" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Data Flow Task\Staging Finding Source"
+          TopLeft="305,143" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="405,185">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="229,42"
+          Id="Package\Data Flow Task\Create category_name column"
+          TopLeft="294,328" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="408.5,278">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task\Create aircraft_id"
+          TopLeft="326,411" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
+          TopLeft="408,370">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Data Flow Task\Create finding_id"
+          TopLeft="324,490" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
+          TopLeft="406.25,453">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="259,46"
+          Id="Package\Data Flow Task\Data Warehouse Finding Destination"
+          TopLeft="270,576" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output3]"
+          TopLeft="402.25,532">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Staging Finding Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Data Warehouse Finding Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
